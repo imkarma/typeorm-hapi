@@ -1,0 +1,13 @@
+{
+  "name": "typeorm-hapi",
+  "version": "0.1.0",
+  "description": "typeorm plugin for hapijs",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "https://github.com/imkarma/typeorm-hapi.git",
+  "author": "imkarma <andrew.pozunyk@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.12"
+  }
+}
