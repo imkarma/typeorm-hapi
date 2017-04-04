@@ -1,12 +1,16 @@
 export interface IRegister {
-    (server:any, options:any, next:any): void;
+    register (server:any, options:any, next:any): void;
     attributes?: any;
 }
 
-export function register(server, option, next){
-    console.log('Register')
-    next();
-};
-module.exports.register.attributes = {
-    pkg: require('../package.json')
-};
+export default ():IRegister =>{
+    return {
+        register: (server, option, next) => {
+            this.attributes = {
+                pkg: require('../package.json')
+            };
+            console.log('Register');
+            next();
+        }
+    }
+}
