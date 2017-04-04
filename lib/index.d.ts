@@ -1,2 +1,2 @@
-import Plugin from './plugin';
-export = Plugin;
+import { register } from './plugin';
+export = register;
