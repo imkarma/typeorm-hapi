@@ -8,10 +8,7 @@ let plugin = (server, option, next) => {
     next();
 };
 
-Object.defineProperty(plugin, 'attributes',{
-    value:{
-        pkg: require('../package.json')
-    }
-});
-
-module.exports.plugin = plugin;
+module.exports.register = plugin;
+module.exports.register.attributes = {
+    pkg: require('../package.json')
+};
