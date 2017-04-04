@@ -3,12 +3,11 @@ export interface IRegister {
     attributes?: any;
 }
 
-let plugin = (server, option, next) => {
+export function register(server, option, next){
+    this.attributes = {
+        pkg: require('../package.json')
+    };
+
     console.log('Register')
     next();
-};
-
-module.exports.register = plugin;
-module.exports.register.attributes = {
-    pkg: require('../package.json')
 };
