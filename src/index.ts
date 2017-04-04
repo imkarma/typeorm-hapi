@@ -14,4 +14,4 @@ Object.defineProperty(plugin, 'attributes',{
     }
 });
 
-export default plugin;
+module.exports.plugin = plugin;
