@@ -2,7 +2,5 @@ export interface IRegister {
     (server: any, options: any, next: any): void;
     attributes?: any;
 }
-export default class Plugin {
-    constructor();
-    register: IRegister;
-}
+declare let plugin: (server: any, option: any, next: any) => void;
+export default plugin;
