@@ -4,10 +4,9 @@ export interface IRegister {
 }
 
 export function register(server, option, next){
-    this.attributes = {
-        pkg: require('../package.json')
-    };
-
     console.log('Register')
     next();
+};
+module.exports.register.attributes = {
+    pkg: require('../package.json')
 };
